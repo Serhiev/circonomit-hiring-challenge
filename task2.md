@@ -56,12 +56,11 @@ Use a **hybrid strategy** where simple, acyclic calculations run inside the mode
 
 ```mermaid
 graph TD
-  A[1. Start with input values] --> B[2. Build dependency graph]
-  B --> C[3. Order calculations]
-  C --> D{4. Cycles present?}
+  A[1.Start with input values] --> B[2.Build dependency graph]
+  B --> C[3.Order calculations]
+  C --> D{4.Cycles present?}
   D -- No --> E[Calculate independent attributes in parallel]
   D -- Yes --> F[Iterative solver for cycles]
-  E --> G[5. Cache results]
+  E --> G[5.Cache results]
   F --> G
-  G --> H[6. Return final outputs]
-
+  G --> H[6.Return final outputs]
